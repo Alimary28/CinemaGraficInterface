@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.CardController">
+
+<HBox alignment="TOP_CENTER">
+        <Label text="Card id:"/>
+        <Spinner fx:id="spnId" editable="true" initialValue="0" max="2000000000" min="0"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="345.0"/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="txtName" promptText="Name"/>
+        <TextField fx:id="txtFirstname" promptText="Firstname"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="345.0"/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="txtCNP" promptText="CNP"/>
+    </HBox>
+    <Label text="Birth date: "/>
+    <HBox alignment="TOP_CENTER" prefWidth="345.0">
+        <TextField fx:id="txtDayB" promptText="Day"/>
+        <TextField fx:id="txtMonthB" promptText="Month"/>
+        <TextField fx:id="txtYearB" promptText="Year"/>
+    </HBox>
+    <Label text="Registration date: "/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="txtDayR" prefHeight="25.0" prefWidth="100.0" promptText="Day"/>
+        <TextField fx:id="txtMonthR" prefHeight="25.0" prefWidth="100.0" promptText="Month"/>
+        <TextField fx:id="txtYearR" prefHeight="25.0" prefWidth="100.0" promptText="Year"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="345.0"/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="txtPoints" promptText="Points"/>
+    </HBox>
+    <Pane prefHeight="5.0" prefWidth="345.0"/>
+    <HBox alignment="TOP_CENTER">
+        <Button text="Add card" fx:id="btnAdd" onAction="#btnAddClick" />
+        <Button text="Cancel card" fx:id="btnCancel" onAction="#btnCancelClick" />
+    </HBox>
+</VBox>

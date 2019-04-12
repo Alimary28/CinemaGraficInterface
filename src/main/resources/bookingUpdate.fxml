@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.BookingController">
+
+<HBox alignment="center">
+        <Label text="Booking id:"/>
+        <Spinner fx:id="spnId" editable="true" initialValue="0" max="2000000000" min="0"/>
+    </HBox>
+    <Pane prefHeight="12.0" prefWidth="446.0"/>
+    <HBox alignment="center">
+        <Label text="Movie id:"/>
+        <Spinner fx:id="spnMovieId" editable="true" initialValue="0" max="2000000000" min="0"/>
+    </HBox>
+    <Pane prefHeight="12.0" prefWidth="446.0"/>
+    <HBox alignment="center">
+        <Label text="Client card id:"/>
+        <Spinner fx:id="spnIdCard" editable="true" initialValue="0" max="2000000000" min="0"/>
+    </HBox>
+    <Pane prefHeight="18.0" prefWidth="446.0"/>
+    <Label text="Date :"/>
+    <HBox alignment="center">
+        <TextField fx:id="txtDay" promptText="Day"/>
+        <TextField fx:id="txtMonth" promptText="Month"/>
+        <TextField fx:id="txtYear" promptText="Year"/>
+    </HBox>
+    <Label text="Hour :"/>
+    <HBox alignment="center">
+        <TextField fx:id="txtHour" promptText="Hour"/>
+        <TextField fx:id="txtMinutes" promptText="Minutes"/>
+    </HBox>
+    <Pane prefHeight="16.0" prefWidth="446.0"/>
+    <Button text="Update" fx:id="btnBookingUpdate" onAction="#btnUpdateClick" />
+    <Button text="Cancel" fx:id="btnBookingCancel" onAction="#btnCancelClick" />
+</VBox>

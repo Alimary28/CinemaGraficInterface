@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<HBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.BookingSearchController">
+    <VBox>
+        <HBox alignment="TOP_CENTER">
+        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Bookings" textAlignment="CENTER"/>
+        </HBox>
+        <HBox alignment="TOP_CENTER">
+            <TableView fx:id="tableViewBookings" editable="true" prefHeight="400.0" prefWidth="485.0">
+                <columns>
+                    <TableColumn fx:id="tableColumnId" text="id">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="id" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tableColumnIdMovie" text="Movie id">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="movieId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tableColumnClientCardId" text="Client card id">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="clientCardId" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tableColumnDate" text="Date">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="date" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="tableColumnHour" text="Hour">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="hour" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+        <HBox>
+            <TextField fx:id="firstHour" prefHeight="25.0" prefWidth="65.0" promptText="Hour"/>
+            <TextField fx:id="firstMinutes" prefHeight="25.0" prefWidth="65.0" promptText="Minutes"/>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="38.0" text="and"/>
+            <TextField fx:id="finishHour" prefHeight="25.0" prefWidth="65.0" promptText="Hour"/>
+            <TextField fx:id="finishMinutes" prefHeight="25.0" prefWidth="65.0" promptText="Minutes"/>
+            <Pane prefHeight="25.0" prefWidth="19.0"/>
+            <Button fx:id="bookingSearch" onAction="#btnSearchClick" text="Search bookings"/>
+            <Pane prefHeight="25.0" prefWidth="12.0"/>
+            <Button fx:id="btnCancel" onAction="#btnCancelClick" text="Cancel"/>
+        </HBox>
+    </VBox>
+</HBox>

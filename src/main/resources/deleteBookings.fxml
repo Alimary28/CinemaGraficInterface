@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.BookingDeleteController">
+    <HBox alignment="TOP_CENTER">
+        <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Bookings" textAlignment="CENTER"/>
+    </HBox>
+    <HBox alignment="TOP_CENTER">
+        <TableView fx:id="tableViewBookings" editable="true" prefHeight="400.0" prefWidth="485.0">
+            <columns>
+                <TableColumn fx:id="tableColumnId" text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnIdMovie" text="Movie id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="movieId" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnClientCardId" text="Client card id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="clientCardId" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnDate" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnHour" text="Hour">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="hour" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </HBox>
+    <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="742.0">
+        <TextField fx:id="beginDay" prefHeight="25.0" prefWidth="65.0" promptText="Day"/>
+        <TextField fx:id="beginMonth" prefHeight="25.0" prefWidth="65.0" promptText="Month"/>
+        <TextField fx:id="beginYear" prefHeight="25.0" prefWidth="65.0" promptText="Year"/>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="51.0" text="and"/>
+        <TextField fx:id="finishDay" prefHeight="25.0" prefWidth="65.0" promptText="Day"/>
+        <TextField fx:id="finishMonth" prefHeight="25.0" prefWidth="65.0" promptText="Month"/>
+        <TextField fx:id="finishYear" prefHeight="25.0" prefWidth="65.0" promptText="Year"/>
+        <Pane prefHeight="100.0" prefWidth="45.0"/>
+        <Button fx:id="deleteBooking" onAction="#deleteBookingClick" text="Delete"/>
+        <Button fx:id="cancelBooking" onAction="#cancelBookingClick" text="Cancel"/>
+        <Button onAction="#btnDeleteUndoClick" text="Undo delete operation"/>
+        <Button onAction="#btnDeleteRedoClick" text="Redo delete operation"/>
+    </HBox>
+</VBox>

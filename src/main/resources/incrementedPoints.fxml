@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.IncrementedPointsController">
+    <HBox alignment="TOP_CENTER">
+        <Label text="Client cards:"/>
+    </HBox>
+    <HBox alignment="TOP_CENTER">
+        <TableView fx:id="tableViewCards" editable="true" prefHeight="410.0" prefWidth="690.0">
+            <columns>
+                <TableColumn fx:id="tableColumnClientId" text="id">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnName" text="Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnFirstname"  text="Firstname">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnCnp" prefWidth="118.0" text="CNP">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cnp" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnBirthDate" prefWidth="118.0" text="Date of birth">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="birthDate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnRegistrationDate" prefWidth="118.0" text="Date of registration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="registrationDate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="tableColumnPoints" prefWidth="90.0" text="Points">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="points" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </HBox>
+    <HBox alignment="TOP_CENTER" prefHeight="36.0" prefWidth="742.0">
+        <TextField fx:id="beginDay" prefHeight="25.0" prefWidth="65.0" promptText="Day"/>
+        <TextField fx:id="beginMonth" prefHeight="25.0" prefWidth="65.0" promptText="Month"/>
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="59.0" text="and"/>
+        <TextField fx:id="finishDay" prefHeight="25.0" prefWidth="65.0" promptText="Day"/>
+        <TextField fx:id="finishMonth" prefHeight="25.0" prefWidth="65.0" promptText="Month"/>
+    </HBox>
+    <Pane prefHeight="7.0" prefWidth="600.0"/>
+    <HBox alignment="TOP_CENTER">
+        <TextField fx:id="incrementedPoints" prefHeight="25.0" prefWidth="161.0" promptText="Incremented Points"/>
+        <Button fx:id="btnIncrementedPoints" onAction="#btnPointsClick" text="Add incremented points"/>
+        <Button fx:id="btnCancelPoints" onAction="#btnCancelClick" text="Cancel"/>
+        <Button onAction="#btnPointsUndoClick" text="Undo points operation" />
+        <Button onAction="#btnPointsRedoClick" text="Redo points operation" />
+    </HBox>
+</VBox>

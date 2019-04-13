@@ -1,1 +1,2 @@
-{"year":2010,"title":"Batman","price":25.0,"inCinema":true,"bookings":2,"id":"1"}
+{"year":2010,"bookings":2,"title":"Batman","price":25.0,"inCinema":true,"id":"1"}
+{"year":2019,"bookings":0,"title":"The princess","price":38.0,"inCinema":true,"id":"2"}

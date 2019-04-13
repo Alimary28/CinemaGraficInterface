@@ -28,7 +28,7 @@ public class BookingSearchController {
     public TextField finishHour;
     public TextField finishMinutes;
     public Button btnCancel;
-    public Button bookingSearch;
+    public Button btnSearch;
 
     private BookingService2 bookingService;
 

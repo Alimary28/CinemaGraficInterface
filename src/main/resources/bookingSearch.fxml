@@ -47,7 +47,7 @@
             <TextField fx:id="finishHour" prefHeight="25.0" prefWidth="65.0" promptText="Hour"/>
             <TextField fx:id="finishMinutes" prefHeight="25.0" prefWidth="65.0" promptText="Minutes"/>
             <Pane prefHeight="25.0" prefWidth="19.0"/>
-            <Button fx:id="bookingSearch" onAction="#btnSearchClick" text="Search bookings"/>
+            <Button fx:id="btnSearch" onAction="#btnSearchClick" text="Search bookings"/>
             <Pane prefHeight="25.0" prefWidth="12.0"/>
             <Button fx:id="btnCancel" onAction="#btnCancelClick" text="Cancel"/>
         </HBox>

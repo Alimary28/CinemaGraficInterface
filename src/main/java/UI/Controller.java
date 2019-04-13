@@ -76,7 +76,7 @@ public class Controller {
 
     public void btnAddMovieClick(ActionEvent actionEvent) {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("movieAdd.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/movieAdd.fxml"));
         upsertMovie(fxmlLoader, "Movie add");
     }
 
@@ -101,7 +101,7 @@ public class Controller {
 
     public void btnUpdateMovieClick(ActionEvent actionEvent){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("movieUpdate.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/movieUpdate.fxml"));
         upsertMovie(fxmlLoader, "Movie update");
 
     }
@@ -121,7 +121,7 @@ public class Controller {
     }
     public void btnAddCardClick(ActionEvent actionEvent){
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("cardAdd.fxml"));
+        fxmlLoader.setLocation(getClass().getResource("/cardAdd.fxml"));
         upsertCard(fxmlLoader, "Card add");
     }
 
@@ -146,7 +146,7 @@ public class Controller {
 
     public void btnUpdateCardClick(ActionEvent actionEvent) {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("cardUpdate.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/cardUpdate.fxml"));
             upsertCard(fxmlLoader, "Card update");
     }
 
@@ -166,7 +166,7 @@ public class Controller {
     public void btnAddBookingClick(ActionEvent actionEvent) {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("bookingAdd.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/bookingAdd.fxml"));
             upsertBooking(fxmlLoader, "Booking add");
     }
 
@@ -191,7 +191,7 @@ public class Controller {
     public void btnUpdateBookingClick(ActionEvent actionEvent) {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("bookingUpdate.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("/bookingUpdate.fxml"));
             upsertBooking(fxmlLoader, "Booking update");
     }
 

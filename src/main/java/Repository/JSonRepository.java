@@ -96,7 +96,7 @@ public class JSonRepository<T extends Entity> implements IRepository<T>{
         writingFile();
     }
     /**
-     * Removes a entity with a given id.
+     * Removes an entity with a given id.
      * @param id the id.
      * @throws InMemoryRepoException if there is no entity with the given id.
      */

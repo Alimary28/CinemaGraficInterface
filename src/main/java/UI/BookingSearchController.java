@@ -38,7 +38,14 @@ public class BookingSearchController {
         this.bookingService = bookingService;
     }
 
+    public void btnCancelClick(ActionEvent actionEvent) {
+
+        Stage stage = (Stage) btnCancel.getScene().getWindow();
+        stage.close();
+    }
+
     public void btnSearchClick(ActionEvent actionEvent) {
+
         try{
             bookings.clear();
             LocalTime start = LocalTime.of(Integer.parseInt(firstHour.getText()), Integer.parseInt(firstMinutes.getText()));
@@ -47,14 +54,8 @@ public class BookingSearchController {
             tableViewBookings.setItems(bookings);
         } catch (RuntimeException rex){
             Logger logger = Logger.getLogger(getClass().getName());
-            logger.log(Level.SEVERE, "Failed to create new Window: Movie update.", rex);
+            logger.log(Level.SEVERE, "Failed to create new Window: Booking update.", rex);
             Common.showValidationError(rex.getMessage());
         }
-    }
-
-    public void btnCancelClick(ActionEvent actionEvent) {
-
-        Stage stage = (Stage) btnCancel.getScene().getWindow();
-        stage.close();
     }
 }

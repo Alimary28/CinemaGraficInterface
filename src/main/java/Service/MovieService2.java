@@ -105,7 +105,7 @@ public class MovieService2 {
         }
     }
 
-    public List<MovieReservationVM> moviesByBoookings() {
+    public List<MovieReservationVM> moviesByBookings() {
         Map<String, Integer> frequencies = new HashMap<>();
         for (Booking2 res : bookingRepo.getAll()) {
             String movieId = res.getMovieId();

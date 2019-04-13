@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Modality;
@@ -46,6 +47,9 @@ public class Controller {
     public TableColumn tableColumnClientCardId;
     public TableColumn tableColumnDate;
     public TableColumn tableColumnHour;
+    public Button btnAddBooking;
+    public Button btnUpdateBooking;
+    public Button btnDeleteBooking;
 
 
     private MovieService2 movieService2;
@@ -270,26 +274,6 @@ public class Controller {
         }
     }
 
-    public void btnBookingSearch(ActionEvent actionEvent) {
-
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            fxmlLoader.setLocation(getClass().getResource("/bookingSearch.fxml"));
-
-            Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-            Stage stage = new Stage();
-            stage.setTitle("Booking search");
-            stage.setScene(scene);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            BookingSearchController controller = fxmlLoader.getController();
-            controller.setService(bookingService2);
-            stage.showAndWait();
-        } catch (IOException e) {
-            Logger logger = Logger.getLogger(getClass().getName());
-            logger.log(Level.SEVERE, "Failed to create new Window: Booking search add.", e);
-        }
-    }
-
     public void btnMoviesByBookings(ActionEvent actionEvent) {
 
         try {
@@ -373,6 +357,26 @@ public class Controller {
         } catch (IOException e) {
             Logger logger = Logger.getLogger(getClass().getName());
             logger.log(Level.SEVERE, "Failed to create new Window: Birthday points add.", e);
+        }
+    }
+
+    public void btnSearch(ActionEvent actionEvent) {
+
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("/bookingSearch.fxml"));
+
+            Scene scene = new Scene(fxmlLoader.load(), 600, 600);
+            Stage stage = new Stage();
+            stage.setTitle("Booking search");
+            stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            BookingSearchController controller = fxmlLoader.getController();
+            controller.setService(bookingService2);
+            stage.showAndWait();
+        } catch (IOException e) {
+            Logger logger = Logger.getLogger(getClass().getName());
+            logger.log(Level.SEVERE, "Failed to create new Window: Booking search add.", e);
         }
     }
 }

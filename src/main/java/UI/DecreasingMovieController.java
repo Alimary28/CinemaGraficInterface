@@ -28,7 +28,7 @@ public class DecreasingMovieController {
     private void initialize(){
         Platform.runLater(() -> {
             try {
-                List<MovieReservationVM> orderedMovies = movieService2.moviesByBoookings();
+                List<MovieReservationVM> orderedMovies = movieService2.moviesByBookings();
                 movies.addAll(orderedMovies);
                 tableViewMovies.setItems(movies);
             } catch (RuntimeException e) {

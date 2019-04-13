@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <HBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.DecreasingMovieController">
     <VBox alignment="CENTER">
-        <Label text="Decreasing oredr movies"/>
+        <Label text="Decreasing order movies"/>
     </VBox>
     <HBox alignment="CENTER">
         <TableView fx:id="tableViewMovies" editable="true" prefHeight="400.0" prefWidth="481.0">

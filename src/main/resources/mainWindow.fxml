@@ -133,7 +133,7 @@
                     </TableColumn>
                     <TableColumn fx:id="tableColumnClientCardId" text="Client card id">
                         <cellValueFactory>
-                            <PropertyValueFactory property="clientCardId" />
+                            <PropertyValueFactory property="cardId" />
                         </cellValueFactory>
                     </TableColumn>
                     <TableColumn fx:id="tableColumnDate" text="Date">
@@ -167,9 +167,9 @@
         </graphic>
         <VBox alignment="TOP_CENTER" prefHeight="964.0" prefWidth="592.0">
             <Pane prefHeight="60.0" prefWidth="696.0"/>
-            <Button onAction="#btnSearchClick" text="Text search"/>
+            <Button onAction="#btnSearchClick" text="Search text"/>
             <Pane prefHeight="60.0" prefWidth="696.0"/>
-            <Button onAction="#btnBookingSearch" text=" Booking search"/>
+            <Button onAction="#btnSearch" text=" Booking search"/>
             <Pane prefHeight="60.0" prefWidth="696.0"/>
             <Button onAction="#btnMoviesByBookings" text="Show movies by number of bookings"/>
             <Pane prefHeight="60.0" prefWidth="696.0"/>

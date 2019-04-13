@@ -19,6 +19,15 @@ public class ClientCardValidatory2 implements IValidator<ClientCard2>{
         if(clientCard2.getPoints() < 0){
             throw new ClientCardException("The value of points must be greater than 0!");
         }
+        String reverse = "";
+        int length = clientCard2.getId().length();
+
+        for(int i = length-1; i >= 0; i--){
+            reverse = reverse + clientCard2.getId().charAt(i);
+        }
+        if(!clientCard2.getId().equals(reverse)){
+            throw new ClientCardException("Not palindrome!");
+        }
     }
 
 }

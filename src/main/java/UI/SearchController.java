@@ -29,15 +29,6 @@ public class SearchController {
         this.bookingService = bookingService;
     }
 
-
-    public void btnClickSearch(ActionEvent actionEvent) {
-
-        String text = searchText.getText();
-        String found = text + " found in:\n" + movieSearch(text) + "\n" + cardSearch(text) + "\n" + bookingSearch(text);
-        if(text.length()>=1)
-            search.setText(found);
-    }
-
     public void btnClickCancel(ActionEvent actionEvent) {
 
         Stage stage = (Stage) btnCancel.getScene().getWindow();
@@ -67,5 +58,13 @@ public class SearchController {
             bookingText += booking + "\n";
         }
         return bookingText;
+    }
+
+    public void btnSearch(ActionEvent actionEvent) {
+
+        String text = searchText.getText();
+        String found = text + " found in:\n" + movieSearch(text) + "\n" + cardSearch(text) + "\n" + bookingSearch(text);
+        if(text.length()>=1)
+            search.setText(found);
     }
 }

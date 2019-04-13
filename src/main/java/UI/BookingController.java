@@ -23,9 +23,9 @@ public class BookingController {
     public Button btnBookingCancel;
     public Spinner spnId;
     public Spinner spnMovieId;
+    public Spinner spnCardId;
 
     public BookingService2 bookingService2;
-    public Spinner spnCardId;
 
     public void setService(BookingService2 bookingService2) {
         this.bookingService2 = bookingService2;

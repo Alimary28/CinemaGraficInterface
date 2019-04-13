@@ -42,7 +42,7 @@ public class CardController {
     public void btnAddClick(ActionEvent actionEvent) {
         try {
             ClientCard2 card = upsertClick();
-            clientCardService2.insert(card.getId(), card.getName(), card.getFirstname(), card.getCnp(), card.getBirthDate(), card.getRegistrationDate(), card.getPoints());
+            clientCardService2.insert(card.getId(), card.getName(), card.getFirstName(), card.getCnp(), card.getBirthDate(), card.getRegistrationDate(), card.getPoints());
             btnCancelClick(actionEvent);
         } catch ( RuntimeException rex ){
             Common.showValidationError(rex.getMessage());
@@ -53,7 +53,7 @@ public class CardController {
 
         try {
             ClientCard2 card = upsertClick();
-            clientCardService2.update(card.getId(), card.getName(), card.getFirstname(), card.getCnp(), card.getBirthDate(), card.getRegistrationDate(), card.getPoints());
+            clientCardService2.update(card.getId(), card.getName(), card.getFirstName(), card.getCnp(), card.getBirthDate(), card.getRegistrationDate(), card.getPoints());
             btnCancelClick(actionEvent);
         } catch ( RuntimeException rex ){
             Common.showValidationError(rex.getMessage());

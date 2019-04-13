@@ -3,14 +3,14 @@ package Domain;
 import java.time.LocalDate;
 
 public class ClientCard2 extends Entity{
-    private String name, firstname, cnp;
+    private String name, firstName, cnp;
     LocalDate birthDate, registrationDate;
     private int points;
 
-    public ClientCard2(String id, String name, String firstname, String cnp, LocalDate birthDate, LocalDate registrationDate, int points) {
+    public ClientCard2(String id, String name, String firstName, String cnp, LocalDate birthDate, LocalDate registrationDate, int points) {
         super(id);
         this.name = name;
-        this.firstname = firstname;
+        this.firstName = firstName;
         this.cnp = cnp;
         this.birthDate = birthDate;
         this.registrationDate = registrationDate;
@@ -22,7 +22,7 @@ public class ClientCard2 extends Entity{
         return "ClientCard{" +
                 "id=" + getId() +
                 ", name='" + name + '\'' +
-                ", firstname='" + firstname + '\'' +
+                ", firstName='" + firstName + '\'' +
                 ", cnp='" + cnp + '\'' +
                 ", birthDate='" + birthDate + '\'' +
                 ", registrationDate='" + registrationDate + '\'' +
@@ -37,11 +37,11 @@ public class ClientCard2 extends Entity{
     public void setName(String name) {
         this.name = name;
     }
-    public String getFirstname(){
-        return firstname;
+    public String getFirstName(){
+        return firstName;
     }
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getCnp() {

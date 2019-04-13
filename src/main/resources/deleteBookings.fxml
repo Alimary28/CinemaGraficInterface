@@ -21,9 +21,9 @@
                         <PropertyValueFactory property="movieId" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="tableColumnClientCardId" text="Client card id">
+                <TableColumn fx:id="tableColumnCardId" text="Client card id">
                     <cellValueFactory>
-                        <PropertyValueFactory property="clientCardId" />
+                        <PropertyValueFactory property="cardId" />
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn fx:id="tableColumnDate" text="Date">

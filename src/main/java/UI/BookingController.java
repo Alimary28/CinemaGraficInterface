@@ -23,9 +23,9 @@ public class BookingController {
     public Button btnBookingCancel;
     public Spinner spnId;
     public Spinner spnMovieId;
-    public Spinner spnClientCardId;
 
     public BookingService2 bookingService2;
+    public Spinner spnCardId;
 
     public void setService(BookingService2 bookingService2) {
         this.bookingService2 = bookingService2;
@@ -63,11 +63,11 @@ public class BookingController {
             try {
                 String id = String.valueOf(spnId.getValue());
                 String movieId = String.valueOf(spnMovieId.getValue());
-                String clientCardId = String.valueOf(spnClientCardId.getValue());
+                String cardId = String.valueOf(spnCardId.getValue());
                 LocalDate date = LocalDate.of(Integer.parseInt(txtYear.getText()), Integer.parseInt(txtMonth.getText()), Integer.parseInt(txtDay.getText()));
                 LocalTime hour = LocalTime.of(Integer.parseInt(txtHour.getText()), Integer.parseInt(txtMinutes.getText()));
 
-                return new Booking2(id, movieId, clientCardId, date, hour);
+                return new Booking2(id, movieId, cardId, date, hour);
             } catch (RuntimeException rex){
                 Common.showValidationError(rex.getMessage());
             }

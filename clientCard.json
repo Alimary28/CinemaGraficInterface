@@ -1,2 +1,3 @@
-{"name":"ana","firstname":"pop","cnp":"123456789","birthDate":{"year":1980,"month":4,"day":4},"registrationDate":{"year":2010,"month":2,"day":15},"points":3,"id":"1"}
-{"name":"ion","firstname":"farcas","cnp":"342138945","birthDate":{"year":1978,"month":5,"day":11},"registrationDate":{"year":2010,"month":3,"day":12},"points":7,"id":"2"}
+{"name":"ana","cnp":"123456789","birthDate":{"year":1980,"month":4,"day":4},"registrationDate":{"year":2010,"month":2,"day":15},"points":3,"id":"1"}
+{"name":"ion","cnp":"342138945","birthDate":{"year":1978,"month":5,"day":11},"registrationDate":{"year":2010,"month":3,"day":12},"points":7,"id":"2"}
+{"name":"zshd","firstName":"jhsgs","cnp":"123123567","birthDate":{"year":1980,"month":12,"day":12},"registrationDate":{"year":2010,"month":3,"day":12},"points":2,"id":"3"}

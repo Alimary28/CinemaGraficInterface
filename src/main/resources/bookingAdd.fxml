@@ -21,7 +21,7 @@
     <Pane prefHeight="10.0" prefWidth="446.0"/>
     <HBox alignment="center">
         <Label text="Card id:"/>
-        <Spinner fx:id="spnClientCardId" editable="true" initialValue="0" max="2000000000" min="0"/>
+        <Spinner fx:id="spnCardId" editable="true" initialValue="0" max="2000000000" min="0"/>
     </HBox>
     <Pane prefHeight="18.0" prefWidth="446.0"/>
     <HBox alignment="CENTER">

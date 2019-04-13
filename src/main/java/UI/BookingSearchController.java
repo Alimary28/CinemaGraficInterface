@@ -20,7 +20,6 @@ public class BookingSearchController {
     public TableView tableViewBookings;
     public TableColumn tableColumnId;
     public TableColumn tableColumnIdMovie;
-    public TableColumn tableColumnClientCardId;
     public TableColumn tableColumnDate;
     public TableColumn tableColumnHour;
     public TextField firstHour;
@@ -29,6 +28,7 @@ public class BookingSearchController {
     public TextField finishMinutes;
     public Button btnCancel;
     public Button btnSearch;
+    public TableColumn tableColumnCardId;
 
     private BookingService2 bookingService;
 

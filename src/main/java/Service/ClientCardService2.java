@@ -81,7 +81,7 @@ public class ClientCardService2 {
         List<ClientCard2> found = new ArrayList<>();
         for (ClientCard2 client : cardRepo.getAll()) {
             // Might return false positives
-            if (client.getId().contains(text) || client.getName().contains(text) || client.getFirstname().contains(text) ||
+            if (client.getId().contains(text) || client.getName().contains(text) || client.getFirstName().contains(text) ||
                 client.getCnp().contains(text) || client.getBirthDate().toString().contains(text) ||
                 client.getRegistrationDate().toString().contains(text) || Integer.toString(client.getPoints()).contains(text) && !found.contains(client)) {
 
@@ -128,7 +128,7 @@ public class ClientCardService2 {
         for (ClientCard2 clients : cardRepo.getAll()){
             if(clients.getBirthDate().getDayOfYear() > start.getDayOfYear() && clients.getBirthDate().getDayOfYear() < end.getDayOfYear()){
 
-                ClientCard2 updateCard = new ClientCard2(clients.getId(), clients.getName(), clients.getFirstname(), clients.getCnp(), clients.getBirthDate(),
+                ClientCard2 updateCard = new ClientCard2(clients.getId(), clients.getName(), clients.getFirstName(), clients.getCnp(), clients.getBirthDate(),
                         clients.getRegistrationDate(), clients.getPoints());
                 clientCard.add(updateCard);
                 clients.setPoints(clients.getPoints() + points);

@@ -20,7 +20,6 @@ public class BookingDeleteController {
     public TableView tableViewBookings;
     public TableColumn tableColumnId;
     public TableColumn tableColumnIdMovie;
-    public TableColumn tableColumnClientCardId;
     public TableColumn tableColumnDate;
     public TableColumn tableColumnHour;
     public TextField beginDay;
@@ -31,6 +30,7 @@ public class BookingDeleteController {
     public TextField finishYear;
     public Button deleteBooking;
     public Button cancelBooking;
+    public TableColumn tableColumnCardId;
 
     private BookingService2 bookingService;
 
